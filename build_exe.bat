@@ -1,0 +1,9 @@
+@echo off
+echo Instalando dependencias...
+pip install -r requirements.txt
+echo Instalando pyinstaller...
+pip install pyinstaller
+echo Creando el ejecutable...
+pyinstaller --onefile --noconsole --add-data "datos_ejemplo.csv;." simulador_cohete.py
+echo ¡Listo! El ejecutable está en la carpeta /dist
+pause
